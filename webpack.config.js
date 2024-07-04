@@ -1,27 +1,26 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.tsx',
+  mode: 'production',
+  entry: './src/index.ts', // 替换为你的组件库的入口文件路径
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-  },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    path: path.resolve(__dirname, 'dist'), // 替换为你的组件库的输出目录
+    filename: path.basename(require('./package.json').main), // 使用 package.json 中的 main 字段的值作为输出文件名
+    library: 'MyLibrary', // 替换为你的组件库的全局变量名
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
+      // 添加适用于 TypeScript 的加载器配置
       {
-        test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
+        test: /\.tsx?$/,
         use: 'ts-loader',
+        exclude: /node_modules/,
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-    }),
-  ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
 };

@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "esnext",
+      "lib": ["dom", "esnext"],
+      "strict": true,
+      "esModuleInterop": true,
+      "jsx": "react-jsx",
+      "moduleResolution": "node",
+      "baseUrl": "./src",
+      "paths": {
+        "*": ["types/*"]
+      },
+      "outDir": "./dist",
+      "sourceMap": true
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+  
+  

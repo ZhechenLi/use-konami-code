@@ -2,6 +2,8 @@
 
 `useKonamiCode` is a React Hook for recognizing and triggering the famous Konami Code key combination: "Up, Up, Down, Down, Left, Right, Left, Right, B, A".
 
+![bg](./workspaces/use-konami-code/bg.png)
+
 ## Features
 
 - Lightweight and easy-to-use React Hook.
@@ -13,17 +15,17 @@
 Install using npm:
 
 ```shell
-npm install use-konami-code
+npm install react-use-konami-code
 ```
 Install using yarn:
 
 ```shell
-yarn add use-konami-code
+yarn add react-use-konami-code
 ```
 ## Usage
 ```tsx
 import React from 'react';
-import useKonamiCode from 'use-konami-code';
+import useKonamiCode from 'react-use-konami-code';
 
 const MyComponent: React.FC = () => {
   const handleKonamiCode = () => {
