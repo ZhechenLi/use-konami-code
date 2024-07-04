@@ -2,7 +2,7 @@
 
 `useKonamiCode` is a React Hook for recognizing and triggering the famous Konami Code key combination: "Up, Up, Down, Down, Left, Right, Left, Right, B, A".
 
-![bg](./workspaces/use-konami-code/bg.png)
+![bg](./bg.png)
 
 ## Features
 
